@@ -1,0 +1,6 @@
+node_modules
+my-music-studio/node_modules
+my-music-studio/client/node_modules
+dist
+my-music-studio/client/dist
+*.log
