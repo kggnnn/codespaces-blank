@@ -1,0 +1,113 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Theme (kept for reference or future toggle, but dark theme will be default) */
+    --background: 0 0% 98%; 
+    --foreground: 220 15% 25%;
+
+    --muted: 220 20% 92%; 
+    --muted-foreground: 220 15% 45%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 25%;
+
+    --border: 220 15% 88%;
+    --input: 220 15% 92%;
+
+    --primary: 210 90% 50%; 
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 90%; 
+    --secondary-foreground: 220 15% 20%; 
+
+    --accent: 210 90% 55%; 
+    --accent-foreground: 0 0% 100%; 
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 210 90% 50%; 
+    --radius: 0.5rem;
+    
+    --chart-1: 210 80% 55%;
+    --chart-2: 25 80% 55%;
+    --chart-3: 150 70% 45%;
+    --chart-4: 280 75% 60%;
+    --chart-5: 50 85% 50%;
+
+    --sidebar-background: 220 18% 96%;
+    --sidebar-foreground: 220 15% 28%;
+    --sidebar-primary: 210 90% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 90% 52%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 220 15% 86%;
+    --sidebar-ring: 210 90% 48%;
+  }
+
+  .dark {
+    /* Dark Theme */
+    --background: 222 40% 12%; 
+    --foreground: 210 20% 96%; 
+
+    --muted: 222 30% 22%;
+    --muted-foreground: 210 20% 70%;
+
+    --popover: 222 40% 10%; 
+    --popover-foreground: 210 20% 96%;
+
+    --card: 222 40% 15%; 
+    --card-foreground: 210 20% 96%;
+
+    --border: 222 30% 30%; 
+    --input: 222 30% 25%;
+
+    --primary: 255 75% 65%; /* Vibrant Purple/Blue */
+    --primary-foreground: 0 0% 100%; 
+
+    --secondary: 222 30% 35%; 
+    --secondary-foreground: 255 75% 80%; 
+
+    --accent: 170 70% 50%; /* Teal */
+    --accent-foreground: 222 40% 10%; 
+
+    --destructive: 0 60% 50%; /* Red */
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 170 70% 50%; /* Teal */
+    
+    --chart-1: 255 70% 60%; /* Primary-like Blue/Purple */
+    --chart-2: 170 65% 55%; /* Teal (similar to accent) */
+    --chart-3: 30 80% 60%;  /* Vibrant Orange - Good for accompaniment contrast */
+    --chart-4: 210 70% 65%; /* Bright Blue */
+    --chart-5: 330 75% 60%; /* Pink/Magenta */
+
+    --sidebar-background: 222 40% 9%;
+    --sidebar-foreground: 210 20% 85%;
+    --sidebar-primary: 255 75% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 170 70% 55%;
+    --sidebar-accent-foreground: 222 40% 9%;
+    --sidebar-border: 222 30% 25%;
+    --sidebar-ring: 170 70% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html.dark { /* Apply dark theme variables when .dark class is present */
+    color-scheme: dark;
+  }
+}
